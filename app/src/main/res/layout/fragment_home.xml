@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     tools:context=".Fragment.HomeFragment">
 
     <androidx.cardview.widget.CardView
@@ -14,7 +15,9 @@
         android:layout_marginLeft="26dp"
         android:layout_marginTop="25dp"
         android:layout_marginRight="26dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -55,7 +58,7 @@
         android:layout_width="80dp"
         android:layout_height="25dp"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/textviewshape"
         android:elevation="7dp"
         android:gravity="center"
