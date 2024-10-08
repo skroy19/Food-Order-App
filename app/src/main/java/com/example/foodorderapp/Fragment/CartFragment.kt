@@ -40,8 +40,8 @@ class CartFragment : Fragment() {
             R.drawable.menu2,
             R.drawable.menu3,
             R.drawable.menu4,
-            R.drawable.menu5,
-            R.drawable.menu6
+            R.drawable.menu4,
+            R.drawable.menu2
         )
         val adapter = CartAdaptar(ArrayList(cartFoodName),ArrayList(cartPrice),ArrayList(cartImage))
         binding.cardRecyclerView.layoutManager = LinearLayoutManager(requireContext())
