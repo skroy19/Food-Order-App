@@ -7,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.foodorderapp.CartAdaptar
+import com.example.foodorderapp.adaptar.CartAdaptar
 import com.example.foodorderapp.PayOutActivity
 import com.example.foodorderapp.R
 import com.example.foodorderapp.databinding.FragmentCartBinding
-import com.example.foodorderapp.databinding.FragmentHomeBinding
 
 
 class CartFragment : Fragment() {

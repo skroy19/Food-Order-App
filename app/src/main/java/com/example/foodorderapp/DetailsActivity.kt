@@ -1,35 +1,31 @@
 package com.example.foodorderapp
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.foodorderapp.databinding.ActivityPayOutBinding
-import com.example.foodorderapp.databinding.FragmentCongratsSheetBinding
+import com.example.foodorderapp.databinding.ActivityDetailsBinding
 
-class PayOutActivity : AppCompatActivity() {
+class DetailsActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityPayOutBinding
+    private lateinit var binding: ActivityDetailsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
-        binding = ActivityPayOutBinding.inflate(layoutInflater)
-
-
         enableEdgeToEdge()
+
+        binding = ActivityDetailsBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
-        binding.placeMyOrder.setOnClickListener {
-            val bottomSheetDialog = CongratsFragmentSheet()
-            bottomSheetDialog.show(supportFragmentManager, "Test")
-        }
+        val foodName = intent.getStringExtra("MenuItemName")
+        val foodImage = intent.getIntExtra("MenuItemImage",0)
+        binding.detailFoodName.text = foodName
+        binding.detailFoodImage.setImageResource(foodImage)
 
-        binding.backButton.setOnClickListener {
+
+        binding.imageButton.setOnClickListener {
             finish()
         }
 
@@ -39,6 +35,4 @@ class PayOutActivity : AppCompatActivity() {
             insets
         }
     }
-
-
 }

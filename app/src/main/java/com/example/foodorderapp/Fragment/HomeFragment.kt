@@ -23,9 +23,7 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
 
-        }
     }
 
     override fun onCreateView(
@@ -73,7 +71,7 @@ class HomeFragment : Fragment() {
         val price = listOf("$5","$7","$8","$10")
         val popularFoodImages = listOf(R.drawable.menu1, R.drawable.menu2, R.drawable.menu3,R.drawable.menu4)
 
-        val adapter = PopularAdaptar(foodName, price,popularFoodImages)
+        val adapter = PopularAdaptar(foodName, price,popularFoodImages,requireContext())
         binding.popularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.popularRecyclerView.adapter = adapter
 
