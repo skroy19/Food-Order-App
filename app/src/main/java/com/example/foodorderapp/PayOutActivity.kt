@@ -52,17 +52,17 @@ class PayOutActivity : AppCompatActivity() {
         setUserData()
 
         //get user details from firebase
-//        val intent = intent
-//        foodItemName = intent.getStringArrayListExtra("FoodItemName") as ArrayList<String> //exact same name that we provided on CartFragment
-//
-//        foodItemPrice = intent.getStringArrayListExtra("FoodItemPrice") as ArrayList<String>
-//        foodItemImage = intent.getStringArrayListExtra("FoodItemImage") as ArrayList<String>
-//        foodItemDescription = intent.getStringArrayListExtra("FoodItemDescription") as ArrayList<String>
-//        foodItemQuantities = intent.getIntegerArrayListExtra("FoodItemQuantities") as ArrayList<Int>
-//
-//        totalAmount = calculateTotalAmount().toString() + "$"
-//        binding.totalAmount.isEnabled = false
-//        binding.totalAmount.setText(totalAmount)
+        val intent = intent
+        foodItemName = intent.getStringArrayListExtra("FoodItemName") as ArrayList<String> //exact same name that we provided on CartFragment
+
+        foodItemPrice = intent.getStringArrayListExtra("FoodItemPrice") as ArrayList<String>
+        foodItemImage = intent.getStringArrayListExtra("FoodItemImage") as ArrayList<String>
+        foodItemDescription = intent.getStringArrayListExtra("FoodItemDescription") as ArrayList<String>
+        foodItemQuantities = intent.getIntegerArrayListExtra("FoodItemQuantities") as ArrayList<Int>
+
+        totalAmount = calculateTotalAmount().toString() + " BDT"
+        binding.totalAmount.isEnabled = false
+        binding.totalAmount.setText(totalAmount)
 
         binding.placeMyOrder.setOnClickListener {
             val bottomSheetDialog = CongratsFragmentSheet()
@@ -85,9 +85,12 @@ class PayOutActivity : AppCompatActivity() {
         for(i in 0 until foodItemPrice.size){
             var price:String = foodItemPrice[i]
             val lastChar: Char = price.last()
-            val priceIntValue: Int = if(lastChar == '$' ){
+            val priceIntValue: Int = if(lastChar == ' ' || lastChar=='$'){
                 price.dropLast(1).toInt()
-            }else{
+            }else if(lastChar == 'T'){
+                price.dropLast(4).toInt()
+            }
+            else{
                 price.toInt()
             }
             //val priceIntValue = price.toInt()

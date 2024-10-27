@@ -107,7 +107,7 @@ class CartFragment : Fragment() {
         if(isAdded && context != null){
             val intent = Intent(requireContext(),PayOutActivity::class.java)
             intent.putExtra("FoodItemName", foodName as ArrayList<String>)
-            intent.putExtra("FoodItemPrive", foodPrice as ArrayList<String>)
+            intent.putExtra("FoodItemPrice", foodPrice as ArrayList<String>)
             intent.putExtra("FoodItemImage", foodImage as ArrayList<String>)
             intent.putExtra("FoodItemDescription", foodDescription as ArrayList<String>)
             intent.putExtra("FoodItemQuantities", foodQuantities as ArrayList<Int>)

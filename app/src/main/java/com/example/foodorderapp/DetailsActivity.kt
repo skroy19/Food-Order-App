@@ -56,6 +56,7 @@ class DetailsActivity : AppCompatActivity() {
 
         binding.addItemButton.setOnClickListener {
             addItemToCart()
+            finish()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
