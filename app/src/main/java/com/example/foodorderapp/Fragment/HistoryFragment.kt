@@ -58,9 +58,11 @@ class HistoryFragment : Fragment() {
 
     //function to see items recent buy
     private fun seeItemsRecentBuy() {
-        listOfOrderItem.firstOrNull()?.let { recentBuy->
+        listOfOrderItem.firstOrNull()?.let { recentBuy ->
             val intent = Intent(requireContext(),recentOrderItems::class.java)
-            intent.putExtra("recentBuyOrderItem",recentBuy)
+            //in video instead of recentBuy they use listOfOrderItem and it gets ok. but when I try to
+            //do this it gets an error. don't know why
+            intent.putExtra("RecentBuyOrderItem",recentBuy)
             startActivity(intent)
         }
     }

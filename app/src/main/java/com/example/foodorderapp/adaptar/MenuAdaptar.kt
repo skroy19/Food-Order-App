@@ -13,14 +13,10 @@ import com.example.foodorderapp.DetailsActivity
 import com.example.foodorderapp.Model.MenuItem
 
 class MenuAdaptar(
-//    private val menuItemsName:MutableList<String>,
-//    private val menuItemPrice:MutableList<String>,
-//    private val MenuImage: MutableList<Int>,
     private val menuItems: List<MenuItem>,
     private val requireContext: Context
 ) : RecyclerView.Adapter<MenuAdaptar.MenuViewHolder>() {
 
-    //private val itemClickListener: OnClickListener ?= null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val binding = MenuItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -41,15 +37,9 @@ class MenuAdaptar(
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
                     openDetailsActivity(position)
-                    //itemClickListener?.onItemClick(position)
+
                 }
 
-//                //sets on clicklistener to open details
-//
-//                val intent = Intent(requireContext, DetailsActivity::class.java)
-//                intent.putExtra("MenuItemName", menuItemsName.get(position))
-//                intent.putExtra("MenuItemImage", MenuImage.get(position))
-//                requireContext.startActivity((intent))
             }
         }
 

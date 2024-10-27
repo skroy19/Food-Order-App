@@ -28,7 +28,9 @@
         android:layout_marginTop="1dp"
 
         android:layout_marginEnd="1dp"
-        android:background="@drawable/searchshape"
+
+
+        android:background="@color/design_default_color_primary_dark"
         android:iconifiedByDefault="false"
         android:queryHint="What do you want to order?"
         android:searchIcon="@drawable/search"
