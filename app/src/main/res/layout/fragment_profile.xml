@@ -34,13 +34,13 @@
                 android:text="Admin" />
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -62,13 +62,13 @@
                 android:text="Address" />
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:inputType="textMultiLine"
-                android:text="Kawranbazar, Dhaka" />
+                android:inputType="textMultiLine" />
         </LinearLayout>
 
         <LinearLayout
@@ -90,13 +90,13 @@
                 android:text="Email" />
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
-                android:inputType="textEmailAddress"
-                android:text="roysanjoy.cse@gmail.com" />
+                android:inputType="textEmailAddress" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,6 +118,7 @@
                 android:text="Phone" />
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -130,7 +131,7 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button10"
+        android:id="@+id/saveInfoButton"
         android:elevation="5dp"
         android:layout_marginBottom="32dp"
         android:textAllCaps="false"

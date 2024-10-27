@@ -62,13 +62,13 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Admin"
                 android:textColor="@color/black" />
         </LinearLayout>
         <LinearLayout
@@ -93,13 +93,13 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="textMultiLine"
-                android:text="Baraipara, Sadar Nilphamari, Rangpur, Bangladesh."
                 android:textColor="@color/black" />
         </LinearLayout>
         <LinearLayout
@@ -124,13 +124,13 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="phone"
-                android:text="01785458904"
                 android:textColor="@color/black" />
         </LinearLayout>
         <LinearLayout
@@ -186,13 +186,13 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/totalAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:inputType="none"
-                android:text="$100"
                 android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
